@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Entrada Numérica</title>
+</head>
+<body>
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" name="numero">
+    <button type="button" onclick="miFunction()">Validar</button>
+    <p id="demo"></p>
+
+    <script>
+        function miFunction(){
+            let x = document.getElementById("numero").value;
+            let texto;
+            if(isNaN(x) || x < 1 || x > 10){
+                texto = "Entrada no válida";
+            } else {
+                texto = "Entrada correcta";
+            }
+            document.getElementById("demo").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
